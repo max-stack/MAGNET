@@ -1,0 +1,50 @@
+2022-01-12 01:44:32,094 [INFO :__main__] My PID is 19672
+2022-01-12 01:44:32,094 [INFO :__main__] PyTorch version: 1.10.0+cu102
+2022-01-12 01:44:32,095 [INFO :__main__] Namespace(att_vec_size=512, batch_size=64, beam_size=3, brnn=True, brnn_merge='concat', cuda_seed=12345, curriculum=0, dec_rnn_size=512, dev_input_lda=None, dev_input_src='D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/dev/dev.equ', dev_ref='D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/dev/dev.nl', dropout=0.5, enc_rnn_size=512, epochs=20, eq_lambda=0.0, eval_per_batch=100, extra_shuffle=True, gpus=[0], halve_lr_bad_count=6, input_feed=1, layers=1, lda_vocab=None, learning_rate=0.001, learning_rate_decay=0.5, log_home='D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/models/magnet', log_interval=100, loss_normalize=False, max_generator_batches=32, max_grad_norm=5, max_lda_words=10, max_sent_length=100, max_weight_value=15, maxout_pool_size=2, online_process_data=True, optim='adam', param_init=0.1, pre_word_vecs_dec=None, pre_word_vecs_enc=None, process_shuffle=False, save_path='D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/models/magnet', seed=12345, src_vocab=None, start_decay_at=8, start_epoch=1, start_eval_batch=200, test_input_lda=None, test_input_src=None, test_ref=None, tgt_vocab=None, train_from='', train_from_state_dict='', train_lda='D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/train/train.lda.txt', train_src='D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/train/train.equ.txt', train_tgt='D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/train/train.nl.txt', word_vec_size=300)
+2022-01-12 01:44:32,123 [INFO :__main__] My seed is 12345
+2022-01-12 01:44:32,124 [INFO :__main__] My cuda seed is 12345
+2022-01-12 01:44:32,127 [INFO :onlinePreprocess] Building source vocabulary...
+2022-01-12 01:44:32,147 [INFO :onlinePreprocess] Created dictionary of size 4 (pruned from 12)
+2022-01-12 01:44:32,148 [INFO :onlinePreprocess] Building target vocabulary...
+2022-01-12 01:44:32,196 [INFO :onlinePreprocess] Created dictionary of size 4 (pruned from 22)
+2022-01-12 01:44:32,197 [INFO :onlinePreprocess] Building lda vocabulary...
+2022-01-12 01:44:32,210 [INFO :onlinePreprocess] Created dictionary of size 4 (pruned from 7)
+2022-01-12 01:44:32,212 [INFO :onlinePreprocess] Preparing training ...
+2022-01-12 01:44:32,212 [INFO :onlinePreprocess] Processing D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/train/train.equ.txt & D:/Documents/ComputerScienceYear3/PersonalProject/MAGNET/data/train/train.nl.txt ...
+2022-01-12 01:44:32,242 [INFO :onlinePreprocess] ... sorting sentences by size
+2022-01-12 01:44:32,243 [INFO :onlinePreprocess] Prepared 1 sentences (0 ignored due to length == 0 or > 100)
+2022-01-12 01:44:32,243 [INFO :__main__]  * vocabulary size. source = 4; target = 4
+2022-01-12 01:44:32,243 [INFO :__main__]  * number of training sentences. 1
+2022-01-12 01:44:32,244 [INFO :__main__]  * maximum batch size. 64
+2022-01-12 01:44:32,244 [INFO :__main__] Building model...
+2022-01-12 01:44:41,520 [INFO :__main__] encoder.word_lut.weight
+2022-01-12 01:44:41,521 [INFO :__main__] encoder.rnn.weight_ih_l0
+2022-01-12 01:44:41,522 [INFO :__main__] encoder.rnn.weight_hh_l0
+2022-01-12 01:44:41,523 [INFO :__main__] encoder.rnn.bias_ih_l0
+2022-01-12 01:44:41,523 [INFO :__main__] encoder.rnn.bias_hh_l0
+2022-01-12 01:44:41,524 [INFO :__main__] encoder.rnn.weight_ih_l0_reverse
+2022-01-12 01:44:41,525 [INFO :__main__] encoder.rnn.weight_hh_l0_reverse
+2022-01-12 01:44:41,525 [INFO :__main__] encoder.rnn.bias_ih_l0_reverse
+2022-01-12 01:44:41,526 [INFO :__main__] encoder.rnn.bias_hh_l0_reverse
+2022-01-12 01:44:41,527 [INFO :__main__] topic_encoder.word_lut.weight
+2022-01-12 01:44:41,528 [INFO :__main__] decoder.word_lut.weight
+2022-01-12 01:44:41,528 [INFO :__main__] decoder.rnn.layers.0.weight_ih
+2022-01-12 01:44:41,528 [INFO :__main__] decoder.rnn.layers.0.weight_hh
+2022-01-12 01:44:41,529 [INFO :__main__] decoder.rnn.layers.0.bias_ih
+2022-01-12 01:44:41,529 [INFO :__main__] decoder.rnn.layers.0.bias_hh
+2022-01-12 01:44:41,530 [INFO :__main__] decoder.attn.linear_pre.weight
+2022-01-12 01:44:41,530 [INFO :__main__] decoder.attn.linear_pre.bias
+2022-01-12 01:44:41,531 [INFO :__main__] decoder.attn.linear_q.weight
+2022-01-12 01:44:41,533 [INFO :__main__] decoder.attn.linear_v.weight
+2022-01-12 01:44:41,534 [INFO :__main__] decoder.topic_attn.linear_pre.weight
+2022-01-12 01:44:41,534 [INFO :__main__] decoder.topic_attn.linear_pre.bias
+2022-01-12 01:44:41,535 [INFO :__main__] decoder.topic_attn.linear_q.weight
+2022-01-12 01:44:41,535 [INFO :__main__] decoder.topic_attn.linear_v.weight
+2022-01-12 01:44:41,536 [INFO :__main__] decoder.readout.weight
+2022-01-12 01:44:41,536 [INFO :__main__] decoder.readout.bias
+2022-01-12 01:44:41,537 [INFO :__main__] decoder.mix_gate.weight
+2022-01-12 01:44:41,537 [INFO :__main__] decoder.mix_gate.bias
+2022-01-12 01:44:41,537 [INFO :__main__] decIniter.initer.weight
+2022-01-12 01:44:41,538 [INFO :__main__] decIniter.initer.bias
+2022-01-12 01:44:41,538 [INFO :__main__] generator.0.weight
+2022-01-12 01:44:41,539 [INFO :__main__] generator.0.bias
