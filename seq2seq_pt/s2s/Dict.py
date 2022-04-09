@@ -78,7 +78,6 @@ class Dict(object):
             self.frequencies[idx] = 1
         else:
             self.frequencies[idx] += 1
-
         return idx
 
     # Return a new dictionary with the `size` most frequent entries.
@@ -88,7 +87,7 @@ class Dict(object):
 
         # Only keep the `size` most frequent entries.
         freq = torch.Tensor(
-                [self.frequencies[i] for i in range(len(self.frequencies))])
+            [self.frequencies[i] for i in range(len(self.frequencies))])
         _, idx = torch.sort(freq, 0, True)
 
         newDict = Dict()
