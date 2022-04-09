@@ -18,8 +18,13 @@ python train.py \
        -train_src ${DATAHOME}/train/train.equ.txt \
        -train_tgt ${DATAHOME}/train/train.nl.txt \
        -train_lda ${DATAHOME}/train/train.lda.txt \
-       -dev_input_src ${DATAHOME}/dev/dev.equ -dev_ref ${DATAHOME}/dev/dev.nl \
-       -layers 1 -enc_rnn_size 512 -brnn -word_vec_size 300 -dropout 0.5 \
+       -dev_input_src ${DATAHOME}/test/dev.equ.txt \
+       -dev_ref ${DATAHOME}/test/dev.nl.txt \
+       -dev_input_lda ${DATAHOME}/test/dev.lda.txt \
+       -test_input_src ${DATAHOME}/test/test.equ.txt \
+       -test_ref ${DATAHOME}/test/test.nl.txt \
+       -test_input_lda ${DATAHOME}/test/test.lda.txt \
+       -layers 1 -enc_rnn_size 512 -brnn -word_vec_size 512 -dropout 0.5 \
        -batch_size 64 -beam_size 3 \
        -epochs 20 \
        -optim adam -learning_rate 0.001 \
