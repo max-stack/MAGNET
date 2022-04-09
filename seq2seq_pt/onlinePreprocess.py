@@ -26,7 +26,7 @@ def makeVocabulary(filenames, size):
                     vocab.add(word)
 
     originalSize = vocab.size()
-    vocab = vocab.prune(size)
+    #vocab = vocab.prune(size)
     logger.info('Created dictionary of size %d (pruned from %d)' %
                 (vocab.size(), originalSize))
 
@@ -37,7 +37,8 @@ def initVocabulary(name, dataFiles, vocabFile, vocabSize):
     vocab = None
     if vocabFile is not None:
         # If given, load existing word dictionary.
-        logger.info('Reading ' + name + ' vocabulary from \'' + vocabFile + '\'...')
+        logger.info('Reading ' + name +
+                    ' vocabulary from \'' + vocabFile + '\'...')
         vocab = s2s.Dict(lower=lower)
         vocab.loadFile(vocabFile)
         logger.info('Loaded ' + str(vocab.size()) + ' ' + name + ' words')
@@ -80,7 +81,8 @@ def makeData(srcFile, ldaFile, tgtFile, srcDicts, ldaDicts, tgtDicts):
 
         # source or target does not have same number of lines
         if sline == "" or tline == "" or ldaLine == "":
-            logger.info('WARNING: source and target do not have the same number of sentences')
+            logger.info(
+                'WARNING: source and target do not have the same number of sentences')
             break
 
         sline = sline.strip()
@@ -90,7 +92,8 @@ def makeData(srcFile, ldaFile, tgtFile, srcDicts, ldaDicts, tgtDicts):
         # source and/or target are empty
         if sline == "" or tline == "" or ldaLine == "":
             # TODO: Fix this, does this affect dev
-            logger.info('WARNING: ignoring an empty line (' + str(count + 1) + ')')
+            logger.info(
+                'WARNING: ignoring an empty line (' + str(count + 1) + ')')
             continue
 
         srcWords = sline.split(' ')
