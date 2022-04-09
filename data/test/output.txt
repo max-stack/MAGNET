@@ -1,0 +1,237 @@
+there are [num0] crayons in [num1] boxes . how many crayons are there in all ?
+at the town carnival billy rode the ferris wheel [num1] times and the bumper cars [num2] times . if each ride cost [num0] tickets , how many tickets did he use ?
+jason went to the mall to buy clothes . she bought a football for $ [num0] , a strategy game for $ [num1] , and a song book for $ [num2] . how much did jason spend on video games ?
+there are [num0] crayons in the drawer . mary placed [num1] crayons out of the drawer . how many crayons are now there in total ?
+lemon heads come in packages of [num1] . louis ate [num0] lemon heads . how many cases of [num1] boxes , plus extra boxes does jenny need to deliver ?
+ned was trying to expand his game collection . he bought [num0] games from a friend and bought [num1] more at a garage sale . if [num2] of the games did n't work , how many good games did he end up with ?
+lewis saved checking on the grapevines for his collection . he needs [num0] ounces of [num1] hours . how much money will he make ?
+melanie had pennies and [num0] pennies in her bank . her dad gave her [num1] pennies and her mother gave her [num2] pennies . how many pennies does melanie have now ?
+in mr. olsen 's mathematics complex , [num0] the garments are bikinis and [num1] are trunks . what fraction of the garments are either bikinis or trunks ?
+freeport mcmoran projects that in the library . she has [num0] bracelets with [num1] cents per hour . how many gallons of gas did she need to buy the notebook ?
+mary has [num0] cupcakes . her friend has [num1] . how many more cupcakes do you have ?
+while playing a trivia game , adam answered [num1] questions correct in the first half and [num2] questions correct in the second half . if each question was worth [num0] points , what was his total ?
+my car gets [num0] miles per gallon of gas . how many bags of she did she pick ?
+annie has blocks . ann has with [num0] blocks . ann finds another [num1] . how many blocks does ann end with ?
+a pet store had [num0] puppies . in one day they sold [num1] of them and put the rest into cages with [num2] in each cage . how many cages did they use ?
+mrs. hilt saw [num0] bees in the hive . the next day she saw [num1] times that many . how many bees did she begin with ?
+there are [num0] pencils in the classroom , each student will have [num1] pencils . how many pencils are there in all ?
+[num0] ducks are swimming in a lake . [num1] more ducks come to join them . how many ducks are swimming in the lake ?
+a tailor cut [num0] of an inch off a skirt and [num1] of an inch off a pair of pants . how much more did the tailor cut off the skirt than the pants ?
+a car rents for [num1] dollars per day plus [num2] cents per mile . you are on a daily budget of [num0] dollars and [num2] cents per mile . how many hours will she make ?
+sunshine car rentals rents a basic car at a daily rate of [num1] dollars plus [num2] cents per mile . city rentals rents a basic car at [num0] dollars plus [num2] cents per mile . for how many cents will he make ?
+frank and her friends were recycling paper for their class . for every [num2] pounds they recycled they earned one point . if haley recycled [num0] pounds and her friends recycled [num1] pounds , how many points did they earn ?
+fred grew [num0] pennies in her bank . her sister borrowed [num1] of a gallon of sugar and now has [num0] off . how many pounds of fruit did janet 's sandcastle than her sister ?
+sara picked [num0] pears and sally picked [num1] pears from the pear tree . how many pears were picked in total ?
+on friday , the students received [num0] feet of [num1] students went on the zoo . what will the total number will be in all ?
+zoe had [num0] songs on her mp3 player . if she deleted [num2] old songs from it and then added [num1] new songs , how many songs does she have on her mp3 player ?
+blake filled a bucket with [num0] of a gallon of gas . she already put [num1] cups of flour on each package . how many cups of flour does she have now ?
+the difference of [num2] times a number and [num0] is [num1] . find the number .
+joan had [num1] peaches at her roadside fruit dish . he went to the orchard and picked peaches to stock up . there are now [num0] peaches . how many did he pick ?
+[num0] painter can paint a house in [num2] hours , how many hours will it take for the job in still air ?
+there are [num0] orchid bushes currently in the park . park workers will plant [num1] more dogwood trees today . how many tons of material did the company buy in all ?
+if [num1] is subtracted from [num2] times a number , the result is [num0] more than [num3] twice the number . what is the number ?
+there were [num0] parents in the program and [num1] pupils , too . how many people were present in the program ?
+oliver had to wash [num0] short sleeve shirts and [num1] long sleeve shirts before school . if he had only washed [num2] of them by the time school started , how many did he not wash ?
+evelyn starts with [num0] bottle caps . she finds another [num1] . how many bottle caps does evelyn end with ?
+[num2] times the sum of a number and [num1] is [num2] less than [num3] times the number . find the number .
+the cafeteria had [num0] apples . for lunch they handed out [num1] to students and decided to use the rest to make pies . if each pie takes [num2] apples , how many pies could they make ?
+[num1] times a number is the same as [num0] more than [num2] times the number . find the number .
+a pro shop in a daily rate of [num2] % traveling a daily rate of [num1] % and [num2] % off . what distance would it take for them to make a profit of [num0] dollars ?
+sunshine car rentals rents a basic car at a daily rate of [num1] dollars plus [num2] cents per mile . you are [num0] dollars to rent a certain car . another agency charges [num0] dollars per day plus [num4] cents per mile to rent the same car . how many per day will have to be driven for the costs of a car from the second agency ?
+bianca was planting vegetables in her garden . she started with [num0] seeds and planted [num1] of them in the big garden and in each of her small gardens put [num2] seeds each . how many small gardens did bianca have ?
+the school cafeteria ordered [num0] red apples and [num1] green apples for students lunches . but , if only [num2] students wanted fruit , how many extra did the cafeteria end up with ?
+mrs. hilt bought a notebook for $ [num0] . what is the cost of them 's house to pay for each can be sold . how much did each dvd cost to rent ?
+tom found [num0] seashells but [num1] were broken . how many unbroken seashells did tom find ?
+mrs. hilt went to a concert . a total of [num0] people attended the concert . the next week , mrs. hilt went to a concert and [num1] people to use a new game . how many miles did they use ?
+the schools debate team had [num0] boys and [num1] girls on it . if they were split into groups of [num2] how many groups could they make ?
+there is [num0] cup of oil in scarlett 's measuring cup . if scarlett adds [num1] cup more , how much oil will be in the measuring cup ?
+frank made [num0] dollars mowing lawns and [num1] dollars weed eating . if he only spent [num2] dollar a week , how long would the money last him ?
+mike had [num1] dollars and jason had dollars . fred washed cars over the weekend and now has [num0] dollars . how much money did fred make washing cars ?
+the school cafeteria ordered [num0] red apples and [num1] green apples for students lunches . but , if only [num2] students wanted fruit , how many girls did the cafeteria end up with ?
+joan 's high school played [num0] baseball games this year , of the games were played at night . she attended [num1] games . how many baseball games did melanie miss ?
+[num0] students went on a field trip . she has [num0] crayons . if they put [num1] more people in the class , how many apples would each person get ?
+there are [num0] dvds in a tree . [num1] are boys went to the store . how many bananas are left in the bus ?
+there are [num0] candies in a pile on the desk . each candy comes in a package of . [num1] candies are added to the pile . how many candies are there in the pile ?
+lemon heads come in packages of [num1] . louis ate [num0] lemon heads . how many whole boxes did he eat ?
+while playing a trivia game , adam answered [num0] questions correct in the first half and [num2] questions correct in the second half . if each question was worth [num0] points , what was his final score ?
+kaleb bought [num1] boxes of chocolate candy and gave [num2] to his little brother . if each box has [num0] pieces inside it , how many pieces did tom still have ?
+joan found [num0] seashells on the beach , she gave a [num1] of a mile with a $ [num0] . how much change will he receive ?
+lemon heads come in packages of [num1] . louis ate [num0] lemon heads . how many whole boxes did he eat and ?
+lana was unboxing some of her old winter clothes . she found [num0] boxes of clothing and inside each box there were [num1] scarves and [num2] mittens . how many pieces of winter clothing did lana have total ?
+the value of a sport utility vehicle this year is [num0] dollars , which is [num1] of what its value was last year . find the value of the vehicle last year .
+luke was working as a sacker at a grocery store where he made [num0] dollars an hour . on monday he worked [num1] hours and on tuesday he worked [num1] hours . how much money did george make in those two days ?
+mike is baking a cake . the recipe calls for [num0] cups of flour and cups of sugar . she already put in [num1] cups of flour . how many cups of flour does she need to add ?
+a company invited [num0] people to a luncheon , but [num1] of them did n't show up . if the tables they had held [num2] people each , how many tables do they need ?
+it rained [num0] inches on monday and [num1] inches on tuesday . how much did it rain on tuesday and sunday combined ?
+lemon heads come in packages of [num1] . if each pencil costs [num1] cupcakes , how many gumdrops can i buy ?
+oliver had [num0] dollars . for his birthday he got [num1] more dollars but spent [num2] on a new game . how much money does she have now ?
+there are [num0] baskets . there are [num1] apples in the basket . how many apples are there in all ?
+there are [num0] walnut trees currently in the park . park workers will plant [num1] more walnut trees today . how many walnut trees will the park have when the workers are finished ?
+a toy store had [num0] giant stuffed bears in stock when they got another shipment with [num1] bears in it . the put the bears onto shelves with [num2] on each shelf . how many shelves did they use ?
+for a birthday party cody bought [num0] regular sodas and [num1] diet sodas . if his fridge would only hold [num2] on each shelf , how many shelves would he fill up ?
+there are [num0] scissors and scissors in the drawer . jason placed [num1] scissors in the drawer . how many scissors are now there in all ?
+there are [num0] boys and [num1] ducks in a tree . how many birds were there in all ?
+jenny ran [num0] mile and walked [num1] mile . how much farther did jenny run than walk ?
+there are [num0] fishbowls . each fishbowl has [num1] fish . how many fish are there in all ?
+a car rents for [num1] dollars per day plus [num2] cents per mile and charges [num0] dollars per pound and [num3] pounds of granola that costs [num3] cents per pound . how many weeks will the same number of chicken boat in still water ?
+edward earned [num0] points for each bag of cans she recycled . if she had [num1] bags , but did n't recycle [num2] of them , how many points would she have earned ?
+there are [num0] marbles in [num1] bag . how many cases of [num1] students , how many does each student have ?
+a plane travels due east at [num1] miles per hour and another plane travels due west at [num2] miles per hour . how many miles did they work in all ?
+wild and crazy productions wants to purchase a new cd producing machine . the production costs dollars per text message with dollars . after buying the costs of dollars per week .
+dan picked [num0] limes and gave sara [num1] of the limes . how many limes does dan have now ?
+at the schools book fair sam bought [num0] adventure books and [num1] mystery books . if [num2] of the books were used , how many new books did he buy ?
+eric has [num0] oranges stored in boxes . if there are [num1] boxes , how many oranges must go in each box ?
+a furniture store has a chair , originally priced at [num0] dollars , on sale for [num1] dollars . what is the percent of decrease , rounded to the nearest tenth ?
+logan recorded the snowfall every day during a snowstorm . he recorded [num0] of a ton , and [num0] of a ton , and [num2] of a bottle at the third table . altogether , how many bottles of mustard does the waitress find ?
+a pro shop in a bowling alley drops the price of bowling balls [num2] % of a [num0] dollars . what was the regular price , in dollars ?
+the cost of a phone book that costs $ [num2] each piece and [num1] cents per pound . how many pounds of chocolate chips will have [num1] dollars ?
+while playing at the arcade , edward won [num0] tickets playing ' whack a mole ' and [num1] tickets playing ' skee ball ' . if he was trying to buy candy that cost [num2] tickets a piece , how many could he buy ?
+melanie had [num0] dimes in her bank . her dad gave her [num1] dimes and her mother gave her [num2] dimes . how many dimes does melanie have now ?
+lemon heads come in packages of [num1] . louis ate [num0] lemon heads . how many whole boxes did he eat and how many lemon heads does he have left ?
+mike has [num1] books and magazines in her library . she bought several books at a yard sale over the weekend . she now has [num0] books in his library . how many books did he buy at the yard sale ?
+there are [num0] houses in lincoln county . during a housing boom , developers built [num1] more . how many houses are there now in lincoln county ?
+joan paid $ [num1] on a cat toy , and a cage cost her $ [num2] with a $ [num0] bill . how much change did fred receive ?
+keith spent $ [num0] on a rabbit toy , found a total of [num0] gallons of water . the purple ring weighed [num1] ounce , and the white ring weighed [num2] ounce . what was the total weight of the plastic rings ?
+the cost of [num2] feet of chain is [num0] dollars . what is the cost of dollars ?
+jason has [num0] pokemon cards . benny bought [num1] of jason 's pokemon cards . how many pokemon cards does jason have now ?
+edward earned [num0] points for each bag of cans she recycled . if she had [num1] bags , but did n't recycle [num2] of them , how many points would she have earned ?
+sarah had [num0] homework problems . she finished [num1] of them but still had [num2] pages of problems to do . if each page has the same number of problems on it , how many problems are on each page ?
+the sum of a number and [num0] is equal to [num1] the number . find the number .
+there were [num1] roses in the vase . mary cut some roses from her flower garden . there are now [num0] roses in the vase . how many roses did she cut ?
+tom found [num0] seashells but [num1] were broken . how many unbroken seashells did tom find ?
+connie has [num0] marbles . juan has [num1] more marbles than connie . how many marbles does juan have ?
+megan had [num0] strawberries in his basket . he got [num1] more strawberries then he added another [num1] more . how many pounds of litter did he work ?
+a chef bought [num0] ounces of water into a plastic wading pool . a few minutes later he added another [num1] buckets . how many buckets of water did the chef buy in all ?
+connie has [num0] popsicle sticks . i have [num1] popsicle sticks . how many bottle caps does janet have in all ?
+dan found [num0] seashells on the first night and [num1] of sugar . she already has [num2] of them . how many more brown sugar did she have ?
+dan found [num0] seashells on the beach , he gave jessica [num1] of the seashells . how many seashells does he now have ?
+mike had [num1] dollars and jason had dollars . fred washed cars over the weekend and now has [num0] dollars . how much money did fred make washing cars ?
+for a class is going on a field trip to the zoo . if each van can hold [num2] people and there are [num0] students and [num1] adults going , how many vans will they need ?
+there are [num0] crayons in the drawer . mary placed [num1] crayons out of the drawer . how many crayons are now there in total ?
+logan recorded the snowfall every day during a snowstorm . he recorded [num0] of a ton , and [num0] of a ton , and [num2] of a bottle at the third table . altogether , how many bottles of mustard does the waitress find ?
+lemon heads come in packages of [num1] . louis ate [num0] lemon heads . how many whole boxes did he eat ?
+there are [num0] inches in the sea broke . before engineers started to fix the morning and [num1] feet tall . how many feet taller than tori now ?
+at the arcade dave won [num0] tickets . if he spent [num2] tickets on a beanie and later won [num1] more tickets , how many would he have ?
+a rental car company charges [num1] dollars per day plus [num2] cents per mile . city rentals rents the same car from [num0] dollars . what is the cost of the mixture ?
+there were [num1] bales of hay in the barn and bales in the shed . jason stacked bales in the barn today . there are now [num0] bales of hay in the barn . how many bales did she have in all ?
+john weighs [num0] pounds . thomas weighs [num1] pounds . how much heavier is jessica than thomas ?
+there were a total of [num0] football games in the season . the season is played for [num1] months . how many basketball games were played each month , if each month has the same number of games ?
+zoe had [num0] books . if he sold [num2] of them and used the money he earned to buy [num1] new books , how many books would adam have ?
+there were a total of [num0] cup of school 's house . this year , he walked [num1] mile to get home . how much farther did craig ride than walk ?
+a producer of packaged frozen meat wants to market mixed meat at [num6] dollars per gallon . how many miles will it take for the mixture to make a profit of [num0] dollars ?
+fred has at a number of clothes . she went to [num0] of them to do [num1] pieces of sales . how many cups of flour did she work in all ?
+mrs. wong had [num0] valentines . she wants to give [num1] more out of the cake . how many tickets does she have left ?
+there are [num0] crayons in the drawer . mary placed [num1] crayons out of the drawer . how many crayons are now there in total ?
+a toy store had [num0] giant stuffed bears in stock when they got another shipment with [num1] bears in it . the put the bears onto shelves with [num2] on each shelf . how many shelves did they use ?
+bianca was planting vegetables in her garden . she started with [num0] seeds and planted [num1] of them in the big garden and in each of her small gardens put [num2] seeds each . how many small gardens did bianca have ?
+sean has [num0] blocks . [num1] are eaten by a hippopotamus . how many bottle caps does carlos end with ?
+a painter needed to paint [num1] rooms in a building . each room takes [num0] hours to paint . if he already painted [num2] rooms , how much longer will he take to paint the rest ?
+joan went to [num0] football games this year , but missed . he went to [num1] games last year . how many basketball games did joan go to in all ?
+a pet shelter had [num0] puppies when another [num1] were brought in . if [num2] puppies a day are adopted , how long would it take for all of them to be adopted ?
+mrs. wong had [num0] eggs . she gives [num1] to phillip . how many eggs does virginia end with ?
+the difference of [num2] dogs in a class of [num1] miles per hour . they drove a [num0] of a pound of [num2] miles per hour . how many miles will it take for the distance to go ?
+while making desserts for a bake sale , she used [num0] of a cup of flour and [num1] of a cup of sugar . how much more flour than sugar did dina use ?
+robin was making baggies of cookies with [num2] cookies in each bag . if she had [num0] chocolate chip cookies and [num1] oatmeal cookies , how many baggies could she make ?
+the school cafeteria had [num0] apples . if she gave [num1] more of them , and then bought [num1] more , how many would she have total ?
+a small publishing company is planning to publish a new book . the production costs will include one - time fixed costs and variable costs . the one - time fixed costs will costs dollars . the production costs will include one - time fixed costs . if the production costs of [num1] dollars per mile . how many miles will she need to have a profit of [num0] dollars ?
+joan found [num0] seashells and jessica found [num1] seashells on the beach . how many seashells did they find together ?
+brenda ’s mother made [num0] their budget on her desk . it took [num0] apples out of [num1] people and kept the left overs , how many apples did they use ?
+benny goes fishing with sara . sara catches [num0] trout . melanie catches [num1] times as many trout as sara . how many trout did melanie catch ?
+a pet store had [num0] books in the bargin bin . if they sold [num2] books , but then put [num1] more in the bin , how many books would be in the bin ?
+there are [num0] erasers in a pile on the desk . each apple comes [num0] more . later , annie buys erasers at the store . how many apples does peter end with ?
+the school cafeteria had [num0] apples . if they used [num2] to make lunch for the students and then bought [num1] more , how many apples would they have ?
+while on vacation , rachel took [num0] pictures at the zoo and [num1] at the museum . if she later deleted [num2] of the pictures , how many pictures from her vacation did she still have ?
+kaleb had [num0] pieces of clothing to wash . he put [num1] of them in one load , but decided to split the rest into [num2] equal loads . how many pieces of clothing could go in each of the small loads ?
+a plane flies [num0] miles against a steady [num1] miles per hour headwind and then returns to the same point with the wind , if the entire trip takes [num4] hours what is the plane 's speed in still air ?
+oliver had [num0] dollars . for his birthday he got [num1] more dollars but spent [num2] on a new game . how much money does he have now ?
+while playing a trivia team had [num0] math problems and [num1] spelling problems . if she can finish [num2] problems in it , how many vans will she need ?
+the sum of [num2] times a number and [num1] more than the number is [num2] . find the number .
+tom went to the mall to buy clothes . she spent $ [num0] on shorts and $ [num1] on a jacket . in total , how much money did jason spend on clothing ?
+last year at newberg 's airport , [num0] passengers landed on time . unfortunately , [num1] passengers landed late . in all , how many passengers landed in newberg last year ?
+dan found [num0] seashells on the beach , he gave jessica [num1] of the seashells . how many seashells does he now have ?
+there are [num0] girls and [num1] boys are barking . [num1] boys are barking . how many are there in all ?
+at the arcade dave won [num0] tickets . if he spent [num2] tickets on a beanie and later won [num1] more tickets , how many would he have ?
+there are [num0] candies in a pile on the desk . each banana comes in a package of . [num1] candies are added to the pile . how many candies are there in the pile ?
+alyssa bought some toys . she bought a football for $ [num0] , and a song book which was $ [num1] . how much did mike spend at the music store ?
+tim had [num0] quarters in her bank . her dad gave him [num1] more from her piggy bank . her sister gave her $ [num1] to be [num0] pennies in her bank . her sister borrowed her mother gave him [num1] more to jeff and now has $ [num0] . how many more balloons does joan have now ?
+tom found [num0] seashells on the beach , she gave him [num1] of a carton of soy milk and [num2] carton of soy milk . how much milk did they drink in all ?
+joan 's dog had [num0] puppies . she gave [num1] to her friends . how many puppies does she now have ?
+sara had [num0] quarters in her bank . she spent [num1] of her quarters . how many quarters does she have now ?
+sara picked [num0] pears and sally picked [num1] pears from the pear tree . how many pears were picked in total ?
+lemon heads come in packages of [num1] . louis ate [num0] lemon heads . how many cases of [num1] boxes , plus extra boxes does shirley end with ?
+mrs. hilt baked [num0] fish . a recipe calls for [num1] times the number . what is the total number of jellybeans in all ?
+oliver had [num0] carrots . if he threw away [num2] old ones that did n't fit and bought [num1] new ones , how many socks would he have ?
+there are [num0] pencils in the drawer . tim placed [num1] more pencils in the drawer . how many pencils are now there in total ?
+there are [num0] blue balloons , sandy has [num1] blue balloons , and tim has [num2] blue balloons . how many blue balloons do they have in total ?
+luke was helping the cafeteria workers pick up lunch trays , but he could only carry [num2] trays at a time . if he had to pick up [num0] trays from one table and [num1] trays from another , how many trips will he make ?
+there are [num0] marbles in a box . louise has oranges in a bag . susan takes [num1] oranges out of the box . how many pencils are left in the jar ?
+the cafeteria had [num0] apples . for lunch they handed out [num1] to students and decided to use the rest to make pies . if each pie takes [num2] apples , how many pies could they make ?
+fred has [num0] baseball cards . keith bought [num1] of fred 's baseball cards . how many baseball cards does fred have now ?
+jeremy strolled [num0] kilometers at [num1] kilometers per hour . how long did jeremy stroll ?
+a ship is filled with [num0] tons of cargo . it stops in the bahamas , where sailors load [num1] tons of cargo onboard . how many tons of cargo does the ship hold now ?
+there school 's baseball team had [num0] new players and [num1] returning players . if the coach put them into groups with [num2] players in each group , how many groups would there be ?
+there are [num1] walnut trees currently in the park . park workers will plant maple trees today . when the workers are finished there will be [num0] walnut trees in the park . how many walnut trees did the workers plant today ?
+mrs. hilt bought [num0] crayons . there are [num1] crayons . how many crayons are there in all ?
+there are [num0] books in the drawer . jason has [num1] books . how many books do they have together ?
+a marine biologist measured one fish that was [num0] of a foot long and a second fish that was [num1] of a foot long . how much longer was the green caterpillar than the orange caterpillar ?
+there are [num0] candies in each candy . how many calories are there in [num1] candy bars ?
+a spaceship traveled [num0] of a light - year from earth to planet x and [num1] of a light - year from planet x to planet y. then it traveled [num1] of a light - year from planet y back to earth . how many light - years did the spaceship travel in all ?
+i walked [num0] miles in hour for relay for life . if i maintained this pace for [num1] hours to ride , how far did she go ?
+a pet store had [num0] siamese cats and [num1] house cats . during a sale they sold [num2] cats . how many cats do they have left ?
+there are [num0] walnut trees currently in the park . park workers will plant [num1] more walnut trees today . how many walnut trees will the park have when the workers are finished ?
+a pot contains [num0] liters of brine at a simple rate of [num1] miles per hour . how many hours will she need to buy the van ?
+sara picked [num0] pears and sally picked [num1] pears from the pear tree . how many pears were picked in all ?
+mary is learning to drive , so this weekend she practiced driving [num0] mile with her mother and another [num1] mile with her father . how far did kendall drive in all ?
+there are [num0] apples in a pile on the desk . each apple comes in a package of . [num1] apples are added to the pile . how many apples are there in the pile ?
+edward and his friend were buying trick decks from the magic shop for [num0] dollars each . how much did they spend if tom bought [num1] decks and his friend bought [num1] decks ?
+a pet shelter had [num0] puppies when another [num1] were brought in . if [num2] puppies a day are adopted , how long would it take for all of them to be adopted ?
+lemon heads come in packages of [num1] . louis ate [num0] lemon heads . how many whole boxes did he eat ?
+sunshine car rentals rents a basic car at [num0] dollars plus [num2] cents per mile . you are on a daily rate of [num1] dollars , and the second plan has no initial fee of [num0] dollars . how many hours will she make ?
+a plane flies [num0] miles against a steady - miles per hour faster . the trip would be placed in still air is on wednesday . if she have [num1] miles per hour faster , in the world grain demand be in . how many miles would be in the current of the current in miles per hour .
+trenton sells electronic supplies . each book cost $ [num1] . what is the rest ?
+martin strolled to lawrence 's house . he can hold [num1] boxes . how many boxes does he have to start with ?
+oliver had [num0] books . in the first round she scored [num1] points and in the second round she scored [num1] points . in the last round she lost [num2] points . how many points did she have at the end of the game ?
+mrs. wong had [num0] apples . she gave [num1] apples to her friends . how many apples does she have now ?
+she counted her friends and her mom gave her mother gave her mother gave her [num1] more players in her house . she finds another [num1] pages of cookies in each bag . how many shelves will she need ?
+frank made [num0] dollars mowing lawns and [num1] dollars weed eating . if he only spent [num2] dollar a week , how long would the money last him ?
+while shopping for music online , nancy bought [num1] country albums and [num2] pop albums . each album came with a lyric sheet and had [num0] songs . how many songs did faye buy total ?
+dan found [num0] seashells on the beach , he gave jessica [num1] of the seashells . how many seashells does he now have ?
+the next act involved several jugglers . if each juggler is juggling [num0] balls at a time , how many balls are needed if there are [num1] jugglers putting a show at the same time ?
+melanie 's father gave her $ [num0] dollars . i have a total of [num0] dollars to pay . if she wants to buy a profit of [num0] dollars , in dollars , how much money did she use ?
+oliver had [num0] carrots . if he threw away [num2] old ones that did n't fit and bought [num1] new ones , how many socks would he have ?
+james has [num0] balloons . amy takes [num1] away . how many apples does pamela end with ?
+the library is planning to collect . [num0] tickets are [num0] students in a bus . how many students went to the concert ?
+at a pie - eating contest , erik got through [num0] pie before time was called ; frank finished just [num1] pie . how much more pie did erik eat than frank ?
+mrs. hilt has [num0] books . amy has [num1] balloons . how many more balloons does she need to buy the blocks ?
+oliver had [num0] dollars . for his birthday he got [num1] more dollars but spent [num2] on a new game . how much money does she have now ?
+mrs. hilt bought [num0] pizzas . each pizza has [num1] chapters . how many chapters did he buy ?
+it rained [num0] inches on monday and [num1] inches on tuesday . how much did it rain in april ?
+randy needs [num0] book in his bank . her dad borrowed [num1] of a mile from her sister and [num2] of a mile from her sister borrowed [num1] of a mile . how many more pennies does the farmer have now ?
+there are [num1] students in the class and [num0] pencils . if the apples are divided equally among the students , how many does each student get ?
+sara had [num0] quarters in her bank . her dad gave her [num1] quarters . how many quarters does she have now ?
+a renovation project required [num0] truck - load of sand , [num1] truck - load of dirt , and [num0] truck - load of sand . how many truck - loads of material were needed in all ?
+if anne wandered for [num0] hours at [num1] miles per hour . how far did norma go ?
+in mr. olsen 's mathematics class , [num0] of the nails are size and [num1] of the nails are size . what fraction of the nails are either size or ?
+sara has [num0] violet balloons . tim has [num1] times more violet balloons than tim . how many violet balloons does tim have ?
+oliver had to wash [num0] short sleeve shirts and [num1] long sleeve shirts before school . if he had only washed [num2] of them by the time school started , how many did he not wash ?
+kaleb was collecting cans for recycling . on saturday he filled [num0] bags up and on sunday he filled [num2] more bags . if each bag had [num0] cans in it , how many cans did he pick up total ?
+[num0] children are taking a bus to the zoo . they sit [num1] children in every seat . how many seats will the children have in all ?
+a rental car agency charges [num1] dollars per day plus [num2] cents per mile . you are on a daily budget of [num0] dollars per mile . how many grams of brazil nuts to run a profit of [num0] dollars ?
+ashley sold [num0] boxes of samoas . how many cases of [num0] boxes , plus extra boxes does ashley need ?
+the school cafeteria ordered [num0] red apples and [num1] green apples for students lunches . but , if only [num2] students wanted fruit , how many girls did the cafeteria end up with ?
+each day , the polar bear at richmond 's zoo eats [num0] of a loaf of wheat bread and [num1] of a loaf of white bread . how many loaves were served in all ?
+the school cafeteria ordered [num0] red apples and [num1] green apples for students lunches . but , if only [num2] students wanted fruit , how many girls did the cafeteria end up with ?
+oliver had [num0] books . in the first round she scored [num1] points and in the second round she scored [num1] points . in the last round she lost [num2] points . how many points did she have at the end of the game ?
+joan decided to buy a combined total of [num0] pieces of fresh and frozen fruit this season . if they have sold [num1] pounds of frozen fruit , how many pieces of fresh fruit have been sold so far ?
+sam grew [num0] pumpkins , but the rabbits ate [num1] inches the water . how much taller was in the account now ?
+a pet store had [num0] siamese cats and [num1] house cats . during a sale they sold [num2] cats . how many cats do they have left ?
+mrs. hilt baked [num0] packages of [num0] . how much money does she need ?
+the school cafeteria had [num0] apples . if she gave [num1] more of them , and then bought [num1] more , how many would she have total ?
+the sumata family took [num0] crayons to stroll to kimberly 's house at [num1] miles per hour . how many students are there in [num1] boxes ?
+keith grew [num0] carrots , fred grew [num1] cantelopes , and fred grew [num2] onions . how many onions did they grow in total ?
+there are [num0] bicycles and [num2] tricycles in the storage area at danny 's apartment building . each bicycle has [num1] wheels and there are [num2] wheels in each package of . how many books does he have ?
+there are [num1] students in the class and [num0] apples . if the apples are divided equally among the students , how many does each student get ?
+a pet store has [num0] bird cages . if each cage has [num1] parrots and [num2] parakeets in it , how many birds does the pet store have total ?
+a trivia team had [num1] members total , but during a game [num2] members did n't show up . if each member that did show up scored [num0] points , how many points were scored total ?
+kelly went to the salon and had [num0] of an inch of hair cut off . the next day she went back and asked for another [num1] of an inch to be cut off . how much hair did she have cut off in all ?
+there were [num0] students riding on the school bus . at the first stop , [num1] students got off of the bus . how many students are left on the bus ?
