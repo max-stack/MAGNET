@@ -70,7 +70,8 @@ class Beam(object):
         if len(self.prevKs) > 0:
             finish_index = self.nextYs[-1].eq(s2s.Constants.EOS)
             if any(finish_index):
-                wordLk.masked_fill_(finish_index.unsqueeze(1).expand_as(wordLk), -float('inf'))
+                wordLk.masked_fill_(finish_index.unsqueeze(
+                    1).expand_as(wordLk), -float('inf'))
                 for i in range(self.size):
                     if self.nextYs[-1][i] == s2s.Constants.EOS:
                         wordLk[i][s2s.Constants.EOS] = 0
@@ -83,7 +84,8 @@ class Beam(object):
         if len(self.prevKs) > 0:
             prev_score = self.all_scores[-1]
             now_acc_score = wordLk + prev_score.unsqueeze(1).expand_as(wordLk)
-            beamLk = now_acc_score / cur_length.unsqueeze(1).expand_as(now_acc_score)
+            beamLk = now_acc_score / \
+                cur_length.unsqueeze(1).expand_as(now_acc_score)
         else:
             self.all_length.append(self.tt.FloatTensor(self.size).fill_(1))
             beamLk = wordLk[0]
@@ -95,12 +97,13 @@ class Beam(object):
 
         # bestScoresId is flattened beam x word array, so calculate which
         # word and beam each score came from
-        prevK = bestScoresId / numWords
+        prevK = bestScoresId // numWords
         predict = bestScoresId - prevK * numWords
 
         if len(self.prevKs) > 0:
             self.all_length.append(cur_length.index_select(0, prevK))
-            self.all_scores.append(now_acc_score.view(-1).index_select(0, bestScoresId))
+            self.all_scores.append(
+                now_acc_score.view(-1).index_select(0, bestScoresId))
         else:
             self.all_scores.append(self.scores)
 
