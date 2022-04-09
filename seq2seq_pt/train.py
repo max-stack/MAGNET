@@ -10,6 +10,7 @@ from torch.autograd import Variable
 import math
 import time
 import logging
+import sys
 
 try:
     import ipdb
@@ -28,12 +29,14 @@ xargs.add_train_options(parser)
 
 opt = parser.parse_args()
 
-logging.basicConfig(format='%(asctime)s [%(levelname)s:%(name)s]: %(message)s', level=logging.INFO)
+logging.basicConfig(
+    format='%(asctime)s [%(levelname)s:%(name)s]: %(message)s', level=logging.INFO)
 log_file_name = time.strftime("%Y%m%d-%H%M%S") + '.log.txt'
 if opt.log_home:
     log_file_name = os.path.join(opt.log_home, log_file_name)
 file_handler = logging.FileHandler(log_file_name, encoding='utf-8')
-file_handler.setFormatter(logging.Formatter('%(asctime)s [%(levelname)-5.5s:%(name)s] %(message)s'))
+file_handler.setFormatter(logging.Formatter(
+    '%(asctime)s [%(levelname)-5.5s:%(name)s] %(message)s'))
 logging.root.addHandler(file_handler)
 logger = logging.getLogger(__name__)
 
@@ -42,7 +45,8 @@ logger.info('PyTorch version: {0}'.format(str(torch.__version__)))
 logger.info(opt)
 
 if torch.cuda.is_available() and not opt.gpus:
-    logger.info("WARNING: You have a CUDA device, so you should probably run with -gpus 0")
+    logger.info(
+        "WARNING: You have a CUDA device, so you should probably run with -gpus 0")
 
 if opt.seed > 0:
     torch.manual_seed(opt.seed)
@@ -165,7 +169,7 @@ def evalModel(model, translator, evalData):
         src_batch, tgt_batch = raw_batch
 
         #  (2) translate
-        pred, predScore, attn, _ = translator.translateBatch(src, lda, tgt)
+        pred, predScore, attn, topicAttn, mixGate, _ = translator.translateBatch(src, lda, tgt) # ***Had to add topicAttn and mixGate
         pred, predScore, attn = list(zip(
             *sorted(zip(pred, predScore, attn, indices),
                     key=lambda x: x[-1])))[:-1]
@@ -175,7 +179,8 @@ def evalModel(model, translator, evalData):
         for b in range(src[0].size(1)):
             n = 0
             predBatch.append(
-                translator.buildTargetTokens(pred[b][n], src_batch[b], attn[b][n])
+                translator.buildTargetTokens(
+                    pred[b][n], src_batch[b], attn[b][n])
             )
         gold += [' '.join(r) for r in tgt_batch]
         predict += [' '.join(sents) for sents in predBatch]
@@ -191,7 +196,8 @@ def evalModel(model, translator, evalData):
 def trainModel(model, translator, trainData, validData, testData, dataset, optim):
     logger.info(model)
     model.train()
-    logger.warning("Set model to {0} mode".format('train' if model.decoder.dropout.training else 'eval'))
+    logger.warning("Set model to {0} mode".format(
+        'train' if model.decoder.dropout.training else 'eval'))
 
     # define criterion of each GPU
     criterion = NMTCriterion(dataset['dicts']['tgt'].size())
@@ -200,8 +206,10 @@ def trainModel(model, translator, trainData, validData, testData, dataset, optim
     start_time = time.time()
 
     def saveModel(metric=None):
-        model_state_dict = model.module.state_dict() if len(opt.gpus) > 1 else model.state_dict()
-        model_state_dict = {k: v for k, v in model_state_dict.items() if 'generator' not in k}
+        model_state_dict = model.module.state_dict() if len(
+            opt.gpus) > 1 else model.state_dict()
+        model_state_dict = {
+            k: v for k, v in model_state_dict.items() if 'generator' not in k}
         generator_state_dict = model.generator.module.state_dict() if len(
             opt.gpus) > 1 else model.generator.state_dict()
         #  (4) drop a checkpoint
@@ -219,9 +227,11 @@ def trainModel(model, translator, trainData, validData, testData, dataset, optim
                 os.makedirs(opt.save_path)
             save_model_path = opt.save_path + os.path.sep + save_model_path
         if metric is not None:
-            torch.save(checkpoint, '{0}_dev_metric_{1}_e{2}.pt'.format(save_model_path, round(metric, 4), epoch))
+            torch.save(checkpoint, '{0}_dev_metric_{1}_e{2}.pt'.format(
+                save_model_path, round(metric, 4), epoch))
         else:
-            torch.save(checkpoint, '{0}_e{1}.pt'.format(save_model_path, epoch))
+            torch.save(checkpoint, '{0}_e{1}.pt'.format(
+                save_model_path, epoch))
 
     def trainEpoch(epoch):
 
@@ -249,7 +259,8 @@ def trainModel(model, translator, trainData, validData, testData, dataset, optim
             constraint_loss, valid_constrain_num = equation_constraint_loss(eq_attn, eq_mask, gate_values,
                                                                             constrain_loss_crit)
             targets = batch[2][0][1:]  # exclude <s> from targets
-            loss, res_loss, num_correct = loss_function(g_outputs, targets, model.generator, criterion)
+            loss, res_loss, num_correct = loss_function(
+                g_outputs, targets, model.generator, criterion)
 
             if math.isnan(res_loss) or res_loss > 1e20:
                 logger.info('catch NaN')
@@ -288,10 +299,12 @@ def trainModel(model, translator, trainData, validData, testData, dataset, optim
             if validData is not None and totalBatchCount % opt.eval_per_batch == -1 % opt.eval_per_batch \
                     and totalBatchCount >= opt.start_eval_batch:
                 model.eval()
-                logger.warning("Set model to {0} mode".format('train' if model.decoder.dropout.training else 'eval'))
+                logger.warning("Set model to {0} mode".format(
+                    'train' if model.decoder.dropout.training else 'eval'))
                 valid_bleu = evalModel(model, translator, validData)
                 model.train()
-                logger.warning("Set model to {0} mode".format('train' if model.decoder.dropout.training else 'eval'))
+                logger.warning("Set model to {0} mode".format(
+                    'train' if model.decoder.dropout.training else 'eval'))
                 model.decoder.attn.mask = None
                 logger.info('Validation Score: %g' % (valid_bleu * 100))
                 if valid_bleu >= optim.best_metric:
@@ -300,10 +313,12 @@ def trainModel(model, translator, trainData, validData, testData, dataset, optim
             if testData is not None and totalBatchCount % opt.eval_per_batch == -1 % opt.eval_per_batch \
                     and totalBatchCount >= opt.start_eval_batch:
                 model.eval()
-                logger.warning("Set model to {0} mode".format('train' if model.decoder.dropout.training else 'eval'))
+                logger.warning("Set model to {0} mode".format(
+                    'train' if model.decoder.dropout.training else 'eval'))
                 valid_bleu = evalModel(model, translator, testData)
                 model.train()
-                logger.warning("Set model to {0} mode".format('train' if model.decoder.dropout.training else 'eval'))
+                logger.warning("Set model to {0} mode".format(
+                    'train' if model.decoder.dropout.training else 'eval'))
                 model.decoder.attn.mask = None
                 logger.info('Test Score: %g' % (valid_bleu * 100))
 
@@ -330,7 +345,6 @@ def main():
     dataset = prepare_data_online(opt.train_src, opt.src_vocab,
                                   opt.train_tgt, opt.tgt_vocab,
                                   opt.train_lda, opt.lda_vocab)
-
     dict_checkpoint = opt.train_from if opt.train_from else opt.train_from_state_dict
     if dict_checkpoint:
         logger.info('Loading dicts from checkpoint at %s' % dict_checkpoint)
@@ -358,7 +372,8 @@ def main():
     decIniter = s2s.Models.DecInit(opt)
 
     generator = nn.Sequential(
-        nn.Linear(opt.dec_rnn_size // opt.maxout_pool_size, dicts['tgt'].size()),  # TODO: fix here
+        nn.Linear(opt.dec_rnn_size // opt.maxout_pool_size,
+                  dicts['tgt'].size()),  # TODO: fix here
         nn.LogSoftmax(dim=1))
 
     model = s2s.Models.NMTModel(encoder, topic_encoder, decoder, decIniter)
@@ -369,13 +384,15 @@ def main():
         logger.info('Loading model from checkpoint at %s' % opt.train_from)
         chk_model = checkpoint['model']
         generator_state_dict = chk_model.generator.state_dict()
-        model_state_dict = {k: v for k, v in chk_model.state_dict().items() if 'generator' not in k}
+        model_state_dict = {
+            k: v for k, v in chk_model.state_dict().items() if 'generator' not in k}
         model.load_state_dict(model_state_dict)
         generator.load_state_dict(generator_state_dict)
         opt.start_epoch = checkpoint['epoch'] + 1
 
     if opt.train_from_state_dict:
-        logger.info('Loading model from checkpoint at %s' % opt.train_from_state_dict)
+        logger.info('Loading model from checkpoint at %s' %
+                    opt.train_from_state_dict)
         model.load_state_dict(checkpoint['model'])
         generator.load_state_dict(checkpoint['generator'])
         opt.start_epoch = checkpoint['epoch'] + 1
@@ -420,14 +437,18 @@ def main():
     optim.set_parameters(model.parameters())
 
     if opt.train_from or opt.train_from_state_dict:
-        optim.optimizer.load_state_dict(checkpoint['optim'].optimizer.state_dict())
+        optim.optimizer.load_state_dict(
+            checkpoint['optim'].optimizer.state_dict())
 
     validData = None
     if opt.dev_input_src and opt.dev_ref:
-        validData = load_dev_data(translator, opt.dev_input_src, opt.dev_input_lda, opt.dev_ref)
+        validData = load_dev_data(
+            translator, opt.dev_input_src, opt.dev_input_lda, opt.dev_ref)
     if opt.test_input_src and opt.test_ref:
-        testData = load_dev_data(translator, opt.test_input_src, opt.test_input_lda, opt.test_ref)
-    trainModel(model, translator, trainData, validData, testData, dataset, optim)
+        testData = load_dev_data(
+            translator, opt.test_input_src, opt.test_input_lda, opt.test_ref)
+    trainModel(model, translator, trainData,
+               validData, testData, dataset, optim)
 
 
 if __name__ == "__main__":
