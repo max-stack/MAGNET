@@ -6,6 +6,9 @@ import argparse
 import math
 import time
 import logging
+from rouge import Rouge
+import matplotlib.pyplot as plt
+from difflib import SequenceMatcher
 
 logging.basicConfig(format='%(asctime)s [%(levelname)s:%(name)s]: %(message)s', level=logging.INFO)
 file_handler = logging.FileHandler(time.strftime("%Y%m%d-%H%M%S") + '.log.txt', encoding='utf-8')
@@ -121,6 +124,7 @@ def main():
         #     goldScoreTotal += sum(goldScore)
         #     goldWordsTotal += sum(len(x) for x in tgtBatch)
 
+        rouge = Rouge()
         for b in range(len(predBatch)):
             count += 1
             outF.write(" ".join(predBatch[b][0][0]) + '\n')
@@ -167,6 +171,41 @@ def main():
     torch.save(all_topic_attn, opt.output + '.topicattn.pt')
     torch.save(all_mix_gate, opt.output + '.mixgate.pt')
 
+    tgt = []
+    out = []
+    rouge_scores = []
+    similarity = []
+
+    NL_TRAIN = "../data/train/train.nl.txt"
+
+    # i = 0
+    # for tgt_line, out_line in addPair(open(opt.tgt, encoding='utf-8'), open(opt.output, encoding='utf-8')):
+    #     if i == 10:
+    #         break
+    #     if tgt_line is not None and out_line is not None:
+    #         tgt.append(tgt_line)
+    #         out.append(out_line)
+    #         rouge_scores.append(rouge.get_scores(out_line, tgt_line)[0]["rouge-1"]["r"])
+    #         max_ratio = 0
+    #         for nl_train in open(NL_TRAIN, "r", encoding="utf-8"):
+    #             max_ratio = max(max_ratio, SequenceMatcher(None, tgt_line, nl_train).ratio())
+    #         similarity.append(max_ratio)
+    #         print(max_ratio)
+    #     i += 1
+
+    # sorted_similarity = []
+    # sorted_list = [x for _,x in sorted(zip(rouge_scores,similarity))]
+    
+    # rouge_scores.sort()
+
+    # x = list(range(len(rouge_scores)))
+
+    # print(rouge.get_scores(out, tgt, avg=True))
+
+    # plt.plot(x, rouge_scores, label="rouge")
+    # plt.plot(x, sorted_similarity, labe="similarity")
+
+    # plt.show()
 
 if __name__ == "__main__":
     main()
