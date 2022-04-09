@@ -38,7 +38,8 @@ class Encoder(nn.Module):
         """
         input: (wrap(srcBatch), wrap(srcBioBatch), lengths)
         """
-        lengths = input[-1].data.view(-1).tolist()  # lengths data is wrapped inside a Variable
+        lengths = input[-1].data.view(-1).tolist(
+        )  # lengths data is wrapped inside a Variable
         wordEmb = self.word_lut(input[0])
         emb = pack(wordEmb, lengths)
         outputs, hidden_t = self.rnn(emb, hidden)
@@ -65,7 +66,8 @@ class TopicEncoder(nn.Module):
         """
         input: (wrap(ldaBatch), lda_length)
         """
-        mask = input[0].eq(s2s.Constants.PAD).float().transpose(0, 1).contiguous()  # (batch, seq)
+        mask = input[0].eq(s2s.Constants.PAD).float().transpose(
+            0, 1).contiguous()  # (batch, seq)
         wordEmb = self.word_lut(input[0])
         return wordEmb, mask
 
@@ -109,10 +111,13 @@ class Decoder(nn.Module):
         self.word_lut = nn.Embedding(dicts.size(),
                                      opt.word_vec_size,
                                      padding_idx=s2s.Constants.PAD)
-        self.rnn = StackedGRU(opt.layers, input_size, opt.dec_rnn_size, opt.dropout)
-        self.attn = s2s.modules.ConcatAttention(opt.enc_rnn_size, opt.dec_rnn_size, opt.att_vec_size)
+        self.rnn = StackedGRU(opt.layers, input_size,
+                              opt.dec_rnn_size, opt.dropout)
+        self.attn = s2s.modules.ConcatAttention(
+            opt.enc_rnn_size, opt.dec_rnn_size, opt.att_vec_size)
         self.dropout = nn.Dropout(opt.dropout)
-        self.readout = nn.Linear((opt.enc_rnn_size + opt.dec_rnn_size + opt.word_vec_size), opt.dec_rnn_size)
+        self.readout = nn.Linear(
+            (opt.enc_rnn_size + opt.dec_rnn_size + opt.word_vec_size), opt.dec_rnn_size)
         self.maxout = s2s.modules.MaxOut(opt.maxout_pool_size)
         self.maxout_pool_size = opt.maxout_pool_size
 
@@ -136,9 +141,11 @@ class Decoder(nn.Module):
             if self.input_feed:
                 input_emb = torch.cat([emb_t, cur_context], 1)
             output, hidden = self.rnn(input_emb, hidden)
-            cur_context, attn, precompute = self.attn(output, context.transpose(0, 1), precompute)
+            cur_context, attn, precompute = self.attn(
+                output, context.transpose(0, 1), precompute)
 
-            readout = self.readout(torch.cat((emb_t, output, cur_context), dim=1))
+            readout = self.readout(
+                torch.cat((emb_t, output, cur_context), dim=1))
             maxout = self.maxout(readout)
             output = self.dropout(maxout)
             g_outputs += [output]
@@ -159,9 +166,12 @@ class MPGDecoder(nn.Module):
         self.word_lut = nn.Embedding(dicts.size(),
                                      opt.word_vec_size,
                                      padding_idx=s2s.Constants.PAD)
-        self.rnn = StackedGRU(opt.layers, input_size, opt.dec_rnn_size, opt.dropout)
-        self.attn = s2s.modules.ConcatAttention(opt.enc_rnn_size, opt.dec_rnn_size, opt.att_vec_size)
-        self.topic_attn = s2s.modules.ConcatAttention(opt.word_vec_size, opt.dec_rnn_size, opt.att_vec_size)
+        self.rnn = StackedGRU(opt.layers, input_size,
+                              opt.dec_rnn_size, opt.dropout)
+        self.attn = s2s.modules.ConcatAttention(
+            opt.enc_rnn_size, opt.dec_rnn_size, opt.att_vec_size)
+        self.topic_attn = s2s.modules.ConcatAttention(
+            opt.word_vec_size, opt.dec_rnn_size, opt.att_vec_size)
         self.dropout = nn.Dropout(opt.dropout)
         self.readout = nn.Linear((opt.enc_rnn_size + opt.word_vec_size + opt.dec_rnn_size),
                                  opt.dec_rnn_size)
@@ -198,15 +208,18 @@ class MPGDecoder(nn.Module):
             output, hidden = self.rnn(input_emb, hidden)
             mix_gate_value = F.sigmoid(self.mix_gate(output))
 
-            cur_context, attn, precompute = self.attn(output, context.transpose(0, 1), precompute)
+            cur_context, attn, precompute = self.attn(
+                output, context.transpose(0, 1), precompute)
             cur_topic_context, topic_attn, topic_precompute = self.topic_attn(output, topic_context.transpose(0, 1),
                                                                               topic_precompute)
-            cur_mix_context = mix_gate_value * cur_context + (1 - mix_gate_value) * cur_topic_context
+            cur_mix_context = mix_gate_value * cur_context + \
+                (1 - mix_gate_value) * cur_topic_context
             all_attn.append(attn)
             all_topic_attn.append(topic_attn)
             all_gate.append(mix_gate_value)
 
-            readout = self.readout(torch.cat((emb_t, output, cur_mix_context), dim=1))
+            readout = self.readout(
+                torch.cat((emb_t, output, cur_mix_context), dim=1))
             maxout = self.maxout(readout)
             output = self.dropout(maxout)
             g_outputs += [output]
@@ -224,7 +237,8 @@ class DecInit(nn.Module):
         assert opt.enc_rnn_size % self.num_directions == 0
         self.enc_rnn_size = opt.enc_rnn_size
         self.dec_rnn_size = opt.dec_rnn_size
-        self.initer = nn.Linear(self.enc_rnn_size // self.num_directions, self.dec_rnn_size)
+        self.initer = nn.Linear(self.enc_rnn_size //
+                                self.num_directions, self.dec_rnn_size)
         self.tanh = nn.Tanh()
 
     def forward(self, last_enc_h):
@@ -246,7 +260,8 @@ class NMTModel(nn.Module):
 
     def make_init_att(self, context):
         batch_size = context.size(1)
-        h_size = (batch_size, self.encoder.hidden_size * self.encoder.num_directions)
+        h_size = (batch_size, self.encoder.hidden_size *
+                  self.encoder.num_directions)
         return Variable(context.data.new(*h_size).zero_(), requires_grad=False)
 
     def forward(self, input):
@@ -265,11 +280,12 @@ class NMTModel(nn.Module):
         # topic_init_att.requires_grad_(False)
 
         init_att = self.make_init_att(context)
-        enc_hidden = self.decIniter(enc_hidden[1]).unsqueeze(0)  # [1] is the last backward hiden
+        enc_hidden = self.decIniter(enc_hidden[1]).unsqueeze(
+            0)  # [1] is the last backward hiden
 
         # return g_outputs, hidden, attn, topic_attn, cur_context, cur_topic_context
         g_out, dec_hidden, _attn, _topic_attn, \
-        _mix_attention_vector, gate_values, = self.decoder(tgt, enc_hidden, context, src_pad_mask,
-                                             topic_context, topic_mask, init_att)
+            _mix_attention_vector, gate_values, = self.decoder(tgt, enc_hidden, context, src_pad_mask,
+                                                               topic_context, topic_mask, init_att)
 
         return g_out, _attn, _topic_attn, src_pad_mask, gate_values
