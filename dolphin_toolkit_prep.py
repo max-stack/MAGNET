@@ -1,3 +1,5 @@
+# @Author: Max Wilson-Hebben
+
 import json
 
 NL_TRAIN_PATH = "data/train/train.nl.txt"
@@ -11,11 +13,8 @@ EQU_DEV_PATH = "data/test/dev.equ.txt"
 TRAIN_TEMPLATE_PATH = "train_template_data.json"
 TEST_TEMPLATE_PATH = "test_template_data.json"
 VALID_TEMPLATE_PATH = "valid_template_data.json"
-# id
-# original_text
-# equation
-# ans
 
+# used to preprocess original Dolphin18K dataset
 class dolphin_toolkit_prep:
     def __init__(self, nl_train_path, nl_test_path, nl_dev_path, equ_train_path, equ_test_path, equ_dev_path, train_template_path, test_template_path, valid_template_path):
         self.nl_train_path = nl_train_path
