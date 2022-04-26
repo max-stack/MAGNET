@@ -1,13 +1,18 @@
+# @Author: Max Wilson-Hebben
+
 from typing import Counter
 from stop_words import get_stop_words
 import numpy as np
-import nltk
 from nltk.stem import WordNetLemmatizer
+import spacy
+from spacy.lang.zh.stop_words import STOP_WORDS
 from string import digits
 from queue import PriorityQueue
 import math
 
+nlp = spacy.load('zh_core_web_sm')
 
+# used to calculate TF-IDF score for a given set of problems
 class TF_IDF:
     def __init__(self, processed_text):
         self.processed_text = processed_text
@@ -60,6 +65,12 @@ class PreprocessText:
         self.remove_apostrophe()
         self.remove_single_chars()
         self.stemming()
+    
+    def preprocess_chinese(self):
+        self.remove_numbers()
+        self.remove_punctuation()
+        self.remove_apostrophe()
+        self.remove_stop_words_chinese()
 
     def remove_numbers(self):
         remove_digits = str.maketrans('', '', digits)
@@ -77,6 +88,17 @@ class PreprocessText:
         for symbol in symbols:
             self.original_text = np.char.replace(
                 self.original_text, symbol, '')
+            
+    def remove_stop_words_chinese(self):
+        # remove stop words
+        for i in range(len(self.original_text)):
+            new_text = ""
+            words = self.original_text[i].split()
+            for word in words:
+                cur_word = nlp.vocab[word]
+                if not cur_word.is_stop:
+                    new_text += word + " "
+            self.original_text[i] = new_text
 
     def remove_stop_words(self):
         # remove stop words
