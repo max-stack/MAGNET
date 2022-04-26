@@ -9,6 +9,15 @@ import logging
 from rouge import Rouge
 import matplotlib.pyplot as plt
 from difflib import SequenceMatcher
+from rouge_score import rouge_scorer
+from nltk.translate import bleu_score, meteor_score
+from similarity_score import Similarity_Ratio_English
+import nltk
+import json
+import numpy as np
+
+nltk.download("wordnet")
+nltk.download("omw-1.4#")
 
 logging.basicConfig(format='%(asctime)s [%(levelname)s:%(name)s]: %(message)s', level=logging.INFO)
 file_handler = logging.FileHandler(time.strftime("%Y%m%d-%H%M%S") + '.log.txt', encoding='utf-8')
@@ -75,6 +84,16 @@ def addTriple(f1, f2, f3):
         yield (x, y1, y2)
     yield (None, None, None)
 
+def similarity_score(problem1, train_data):
+    highest_similarity = 0
+    for j in range(len(train_data)):
+        test = Similarity_Ratio_English(problem1, train_data[j]["segmented_text"])
+        similarity = test.cosine_similarity()
+        if similarity > highest_similarity:
+            highest_similarity = similarity
+    
+    return highest_similarity
+
 
 def main():
     opt = parser.parse_args()
@@ -97,7 +116,7 @@ def main():
     all_topic_attn = []
     all_mix_gate = []
 
-    tgtF = open(opt.tgt) if opt.tgt else None
+    tgtF = open(opt.tgt, encoding="utf-8") if opt.tgt else None
     for line, lda in addPair(open(opt.src, encoding='utf-8'), open(opt.lda, encoding='utf-8')):
 
         if (line is not None) and (lda is not None):
@@ -171,41 +190,78 @@ def main():
     torch.save(all_topic_attn, opt.output + '.topicattn.pt')
     torch.save(all_mix_gate, opt.output + '.mixgate.pt')
 
-    tgt = []
-    out = []
-    rouge_scores = []
-    similarity = []
+    # tgt = []
+    # out = []
+    # rouge_scores = []
+    # bleu_scores = []
+    # meteor_scores = []
+    # similarity = []
 
-    NL_TRAIN = "../data/train/train.nl.txt"
+    # NL_TRAIN = "../data/datasets/mawps_trainset.json"
+    # NL_TEST = "../data/datasets/mawps_testset.json"
+    # NL_DEV = "../data/datasets/mawps_validset.json"
+
+    # file = open(NL_TRAIN, "r", encoding="utf-8")
+    # train_data = json.load(file)
+
+    # file = open(NL_TEST, "r", encoding="utf-8")
+    # train_data.extend(json.load(file))
+
+    # file = open(NL_DEV, "r", encoding="utf-8")
+    # train_data.extend(json.load(file))
+
 
     # i = 0
+    # scorer = rouge_scorer.RougeScorer(['rougeL'], use_stemmer=True)
     # for tgt_line, out_line in addPair(open(opt.tgt, encoding='utf-8'), open(opt.output, encoding='utf-8')):
-    #     if i == 10:
-    #         break
     #     if tgt_line is not None and out_line is not None:
     #         tgt.append(tgt_line)
     #         out.append(out_line)
-    #         rouge_scores.append(rouge.get_scores(out_line, tgt_line)[0]["rouge-1"]["r"])
-    #         max_ratio = 0
-    #         for nl_train in open(NL_TRAIN, "r", encoding="utf-8"):
-    #             max_ratio = max(max_ratio, SequenceMatcher(None, tgt_line, nl_train).ratio())
+    #         cur_rouge_score = scorer.score(tgt_line, out_line)["rougeL"].fmeasure
+    #         cur_bleu_score = bleu_score.sentence_bleu([tgt_line.split()], out_line.split())
+    #         cur_meteor_score = meteor_score.meteor_score([tgt_line.split()], out_line.split())
+
+    #         rouge_scores.append(cur_rouge_score)
+    #         bleu_scores.append(cur_bleu_score)
+    #         meteor_scores.append(cur_meteor_score)
+    #         max_ratio = similarity_score(out_line, train_data)
     #         similarity.append(max_ratio)
     #         print(max_ratio)
     #     i += 1
 
     # sorted_similarity = []
-    # sorted_list = [x for _,x in sorted(zip(rouge_scores,similarity))]
+
+    # sorted_rouge = np.array([x for _,x in sorted(zip(similarity,rouge_scores))])
+    # sorted_meteor = np.array([x for _,x in sorted(zip(similarity,meteor_scores))])
+    # sorted_bleu = np.array([x for _,x in sorted(zip(similarity,bleu_scores))])
     
-    # rouge_scores.sort()
+    # similarity.sort()
+    # similarity = np.array(similarity)
 
-    # x = list(range(len(rouge_scores)))
+    # x = np.array(list(range(len(rouge_scores))))
 
-    # print(rouge.get_scores(out, tgt, avg=True))
+    # a_sim, b_sim = np.polyfit(x, similarity, 1)
+    # a_rouge, b_rouge = np.polyfit(x, sorted_rouge, 1)
+    # a_bleu, b_bleu = np.polyfit(x, sorted_bleu, 1)
+    # a_met, b_met = np.polyfit(x, sorted_meteor, 1)
 
-    # plt.plot(x, rouge_scores, label="rouge")
-    # plt.plot(x, sorted_similarity, labe="similarity")
+    # plt.scatter(x, sorted_rouge, s=3)
+    # plt.scatter(x, sorted_bleu, s=3)
+    # plt.scatter(x, sorted_meteor, s=3)
+    # plt.scatter(x, similarity, s=3)
+    # plt.plot(x, a_rouge*x+b_rouge, label="ROUGE Score")
+    # plt.plot(x, a_bleu*x+b_bleu, label="BLEU Score")
+    # plt.plot(x, a_met*x+b_met, label="METEOR Score")
+    # plt.plot(x, a_sim*x+b_sim, label="Similarity Score")
+    # plt.plot(x, sorted_rouge, label="ROUGE Score")
+    # plt.plot(x, sorted_bleu, label="BLEU Score")
+    # plt.plot(x, sorted_meteor, label="METEOR Score")
+    # plt.plot(x, similarity, label="Similarity Score")
+    # plt.xlabel("Generated Problem Index")
+    # plt.ylabel("Ratio Score")
+    # plt.legend()
 
-    # plt.show()
+    #plt.show()
 
 if __name__ == "__main__":
     main()
