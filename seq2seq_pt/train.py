@@ -16,11 +16,16 @@ try:
     import ipdb
 except ImportError:
     pass
-from nltk.translate import bleu_score
+from rouge_score import rouge_scorer
+import nltk
+from nltk.translate import bleu_score, meteor_score
 from s2s.xinit import xavier_normal, xavier_uniform
 import os
 from PyRouge.Rouge import Rouge
 import xargs
+
+nltk.download("wordnet")
+nltk.download("omw-1.4#")
 
 parser = argparse.ArgumentParser(description='train.py')
 xargs.add_data_options(parser)
@@ -185,6 +190,29 @@ def evalModel(model, translator, evalData):
         gold += [' '.join(r) for r in tgt_batch]
         predict += [' '.join(sents) for sents in predBatch]
     scores = rouge_calculator.compute_rouge(gold, predict)
+    scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
+    total_rouge = {}
+    total_rouge["rouge1"] = 0
+    total_rouge["rouge2"] = 0
+    total_rouge["rougeL"] = 0
+    total_bleu = 0
+    total_meteor = 0
+    for i in range(len(gold)):
+        rouge_score = scorer.score(gold[i], predict[i])
+        total_rouge["rouge1"] += rouge_score["rouge1"].fmeasure
+        total_rouge["rouge2"] += rouge_score["rouge2"].fmeasure
+        total_rouge["rougeL"] += rouge_score["rougeL"].fmeasure
+        total_bleu += bleu_score.sentence_bleu([gold[i].split()], predict[i].split())
+        total_meteor += meteor_score.meteor_score([gold[i].split()], predict[i].split())
+    rouge_average = {}
+    rouge_average["rouge1"] = total_rouge["rouge1"]/len(gold)
+    rouge_average["rouge2"] = total_rouge["rouge2"]/len(gold)
+    rouge_average["rougeL"] = total_rouge["rougeL"]/len(gold)
+    bleu_average = total_bleu/len(gold)
+    meteor_average = total_meteor/len(gold)
+    logger.info("ROUGE score: {}".format(rouge_average))
+    logger.info("BLEU score: {}".format(bleu_average))
+    logger.info("METEOR score {}".format(meteor_average))
     logger.info(str(scores))
 
     with open(ofn, 'w', encoding='utf-8') as of:
